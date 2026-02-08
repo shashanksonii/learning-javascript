@@ -1,5 +1,5 @@
 // var, let, const
-// when '{}' is used with function or if-else => it is a scope/block
+// when '{}' is used with functions, if-else or loops => it is a scope/block
 
 let a = 100
 const b = 200
@@ -31,4 +31,4 @@ console.log(a);  // therefore the change reflects here as well
 
 // this is the problem with 'var' its scope is always global(propagates outside its block) that is why 'var' is never used in modern javascript
 
-// learn DOM = document object model
+// learn DOM = document object model => how html webpage is manipulated using javascript
