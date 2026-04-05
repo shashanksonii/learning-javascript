@@ -49,3 +49,29 @@ for (let index = 1; index <= 10; index++) {
     }
     console.log(`Value of i is ${index}`);
 }
+
+
+// while loop
+let index = 0
+while (index <= 10) {
+    console.log(`Value of index is ${index}`);
+    index = index + 2
+}
+
+let myArray2 = ['flash', "batman", "superman"]
+
+let arr = 0
+while (arr < myArray2.length) {
+    console.log(`Value is ${myArray2[arr]}`);
+    arr = arr + 1
+}
+
+
+// do while loop
+let score = 11
+// runs the first iteration no matter what - without checking the condition
+// condition is checked after running the iteration
+do {
+    console.log(`Score is ${score}`);
+    score++
+} while (score <= 10);
