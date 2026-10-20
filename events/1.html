@@ -7,7 +7,7 @@
 </head>
 <body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing image</h2>
-    <div >
+    <div>
         <ul id="images">
             <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
             <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
@@ -19,45 +19,82 @@
    </div>
 </body>
 <script>
+
+    // // older approach
     // document.getElementById('owl').onclick = function(){
     //     alert("owl clicked")
     // }
 
-     // attachEvent()
-    // jQuery - on
+    // document.getElementById('owl').addEventListener(
+    //     'click',
+    //     function(){
+    //         alert("own clickeddd !!!")
+    //     },
+    //     false // false by default
+    // )
+
+    // attachEvent() - internet explorer era
+    // jQuery - on - before react.js framework
+
+    // document.getElementById('owl').addEventListener(
+    //     'click',
+    //     function(e){
+    //         console.log(e)
+    //     },
+    //     false 
+    // )
 
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
+
+    // document.getElementById('owl').addEventListener(
+    //     'click',
+    //     function(){
+    //         console.log("own clickeddd !!!")
+    //     },
+    //     false // false by default
+    // )
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, true)
+
+
+    // //// if we do not want to show the bubbled event at all
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     // e.stopPropagation()
+    // }, false)
+    
+
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
     // }, false)
 
-    // document.getElementById('owl').addEventListener('click', function(e){
-    //     console.log("owl clicked");
-    //     e.stopPropagation()
-    // }, false)
-    
-    // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
-    //     e.stopPropagation()
-    //     console.log("google clicked");
-    // }, false)
+    // document.getElementById('google').addEventListener(
+    //     'click',
+    //     function(e){
+    //         e.preventDefault();
+    //         e.stopPropagation();
+    //         console.log("google clicked");
+    //     }, false
+    // )
    
-    
-    document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
-            console.log(e.target.id);
-            let removeIt = e.target.parentNode
-            removeIt.remove()
+    document.querySelector('#images').addEventListener(
+        'click',
+        function(e){
+            if(e.target.tagName === 'IMG'){
+                console.log(e.target.id);
+                let removeThis = e.target.parentNode 
+                removeThis.remove()
+            }
         }
+    )
     
-        
-    })
-    
-    //removeIt.parentNode.removeChild(removeIt)
+    // this method was used earlier when .remove() was not there.
+    // removeThis.parentNode.removeChild(removeIt) 
 </script>
 </html>
